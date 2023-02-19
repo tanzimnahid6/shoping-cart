@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"  data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="navbar bg-base-100 shadow-2xl lg:px-10">
+            <div class="flex-1">
+              <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+            </div>
+            <div class="flex-none gap-2">
+              <div class="form-control">
+                <input type="text" placeholder="Search" class="input input-bordered" />
+              </div>
+              <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                  <div class="w-10 rounded-full">
+                    <img src="https://picsum.photos/200/300" />
+                  </div>
+                </label>
+                <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                  <li>
+                    <a class="justify-between">
+                      Profile
+                      <span class="badge">New</span>
+                    </a>
+                  </li>
+                  <li><a>Settings</a></li>
+                  <li><a>Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </header>
+
+    <!-- main section -->
+    <main>
+        <section class="lg:px-12 md:px-5 flex flex-col md:flex-row lg:flex-row">
+            <div class="product-details mt-5 w-[100%] md:w-[70%]  grid md:grid-cols-2 lg:grid-cols-3 gap-5 p-2.5 ">
+                <div class="card card-compact w-full bg-base-100 shadow-xl  ">
+                    <figure><img class="w-90 h-40" src="img/heart_js.jpg" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 id="first-card-name" class="card-title">Heart!</h2>
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, commodi.</p>
+                      <p>Price: $<span id="first-card-price">120</span></p>
+                      <p>Quantity: <span id="first-card-quantity">5</span></p>
+                      <div class="card-actions justify-end">
+                        <button id="first-card" class="btn btn-primary">Add to cart</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card card-compact w-full bg-base-100 shadow-xl ">
+                    <figure><img class="w-90 h-40" src="img/vue-js.jpg" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Vue</h2>
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, commodi.</p>
+                      <p>Price: $<span>150</span></p>
+                      <p>Quantity: <span>2</span></p>
+                      <div class="card-actions justify-end">
+                        <button id="second-card" class="btn btn-primary">Add to cart</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card card-compact w-full bg-base-100 shadow-xl ">
+                    <figure><img class="w-90 h-40" src="img/coffee.jpg" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 id="third-card-name" class="card-title">Coffee</h2>
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, commodi.</p>
+                      <p>Price: $<span id="third-card-price">150</span></p>
+                      <p>Quantity: <span id="third-card-quantity">15</span></p>
+                      <div class="card-actions justify-end">
+                        <button id="third-card" class="btn btn-primary">Add to cart</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card card-compact w-full bg-base-100 shadow-xl ">
+                    <figure><img class="w-90 h-40" src="img/panda.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Panda!</h2>
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, commodi.</p>
+                      <p>Price: $<span>0</span></p>
+                      <p>Quantity: <span>35</span></p>
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Add to cart</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card card-compact w-full bg-base-100 shadow-xl ">
+                    <figure><img class="w-90 h-40" src="img/umbrella.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Umbrella</h2>
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, commodi.</p>
+                      <input type="text" placeholder="Price" class="input input-bordered input-sm w-1/2 max-w-xs" />
+                      <input type="text" placeholder="Quantity" class="input input-bordered input-sm w-1/2 max-w-xs" />
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Add to cart</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="card-details  w-[100%] md:w-[30%] h-full mx-auto mt-5 ">
+                <h1 class="text-3xl text-center underline">Total Products :<span>0</span></h1>
+                <div class="overflow-x-auto">
+                    <table class="table w-full">
+                      <!-- head -->
+                      <thead>
+                        <tr>
+                          <th>No</th>
+                          <th>Name</th>
+                          <th>Price</th>
+                          <th>Quantity</th>
+                          <th>Total</th>
+                        </tr>
+                        <tbody id="table-data-container">
+                            <!-- <th>1</th>
+                            <td>Nahid</td>
+                            <td>2cror</td>
+                            <td>455</td> -->
+                        </tbody>
+                      </thead>
+                      
+                    </table>
+                  </div>
+            </div>
+        </section>
+     
+    </main>
+  
+        <!--  js file-->
+    <script src="index.js"></script>
+</body>
+</html>
